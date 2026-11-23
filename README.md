@@ -27,3 +27,7 @@ cmake -S . -B build-embedded -DCMAKE_TOOLCHAIN_FILE=path/to/toolchain.cmake -DCH
 ```
 
 The supplied clock must represent elapsed microseconds and should be monotonic modulo 2^64. The library measures elapsed wall-clock time, including interrupts or preemption, not exclusive CPU execution time. Resolution and accuracy depend on the supplied clock. Call `chrono_start` before `chrono_elapsed_us`.
+
+## License
+
+Licensed under the [MIT License](LICENSE).
