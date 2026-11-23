@@ -1,8 +1,8 @@
-# chrono-c
+# chrono
 
 Version: **{{ chrono_version }}**
 
-chrono-c is a minimal C99 stopwatch library for embedded and native systems.
+chrono is a minimal C99 stopwatch library for embedded and native systems.
 It provides a small API for initializing a timer, supplying a microsecond clock,
 starting a measurement and reading the elapsed time.
 

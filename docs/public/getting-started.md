@@ -2,7 +2,7 @@
 
 ## Requirements
 
-chrono-c requires CMake 3.16 or newer and a C99 compiler.
+chrono requires CMake 3.16 or newer and a C99 compiler.
 
 ```sh
 cmake -S . -B build
@@ -15,11 +15,11 @@ executables are usually under a configuration subdirectory such as `Debug`.
 
 ## CMake options
 
-| Option | Default | Meaning |
-| --- | --- | --- |
-| `CHRONO_BUILD_EXAMPLES` | `ON` | Build the example executable |
-| `CHRONO_BUILD_TESTS` | `ON` | Build and register the CTest test |
-| `CHRONO_BUILD_CLI` | `ON` | Build the native persistent elapsed-time CLI |
+| Option                  | Default | Meaning                                      |
+| ----------------------- | ------- | -------------------------------------------- |
+| `CHRONO_BUILD_EXAMPLES` | `ON`    | Build the example executable                 |
+| `CHRONO_BUILD_TESTS`    | `ON`    | Build and register the CTest test            |
+| `CHRONO_BUILD_CLI`      | `ON`    | Build the native persistent elapsed-time CLI |
 
 ## Installation
 

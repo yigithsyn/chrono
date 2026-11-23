@@ -1,6 +1,6 @@
 # Embedded use
 
-chrono-c can be used without host timing functions by supplying a clock for
+chrono can be used without host timing functions by supplying a clock for
 the target hardware.
 
 ```c

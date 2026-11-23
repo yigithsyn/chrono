@@ -1,4 +1,4 @@
-# chrono-c
+# chrono
 
 Minimal C99 microsecond stopwatch library for embedded systems.
 

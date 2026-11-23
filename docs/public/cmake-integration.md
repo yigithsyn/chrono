@@ -2,7 +2,7 @@
 
 ## Installed package
 
-After installing chrono-c:
+After installing chrono:
 
 ```cmake
 find_package(chrono CONFIG REQUIRED)

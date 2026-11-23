@@ -1,4 +1,4 @@
-site_name: chrono-c
+site_name: chrono
 site_description: Minimal C99 stopwatch and elapsed-time library
 site_url: https://yigithsyn.github.io/chrono/
 repo_url: https://github.com/yigithsyn/chrono
