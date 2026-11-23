@@ -1,0 +1,19 @@
+site_name: chrono-c
+site_description: Minimal C99 stopwatch and elapsed-time library
+site_url: https://yigithsyn.github.io/chrono/
+repo_url: https://github.com/yigithsyn/chrono
+repo_name: yigithsyn/chrono
+
+docs_dir: docs/public
+hooks:
+  - docs/hooks.py
+theme:
+  name: readthedocs
+nav:
+  - Overview: index.md
+  - Build and install: getting-started.md
+  - C API: api.md
+  - Command-line interface: cli.md
+  - CMake integration: cmake-integration.md
+  - Embedded use: embedded.md
+strict: true

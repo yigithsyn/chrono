@@ -50,6 +50,18 @@ cmake -S . -B build-embedded -DCMAKE_TOOLCHAIN_FILE=path/to/toolchain.cmake -DCH
 
 The supplied clock must represent elapsed microseconds and should be monotonic modulo 2^64. The library measures elapsed wall-clock time, including interrupts or preemption, not exclusive CPU execution time. Resolution and accuracy depend on the supplied clock. Call `chrono_start` before `chrono_elapsed_us`.
 
+## Documentation
+
+```sh
+python -m pip install -r docs/requirements.txt
+python -m mkdocs build --strict
+python -m mkdocs serve
+```
+
+The documentation is available as MkDocs content under `docs/public` and uses
+the Read the Docs theme. It is configured for both local builds and Read the Docs
+through `.readthedocs.yaml`.
+
 ## License
 
 Licensed under the [MIT License](LICENSE).

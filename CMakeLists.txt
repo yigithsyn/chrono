@@ -59,3 +59,17 @@ endif()
 install(TARGETS chrono EXPORT chronoTargets ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
 install(FILES include/chrono.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 install(EXPORT chronoTargets NAMESPACE chrono:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/chrono)
+
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+    cmake/chronoConfig.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/chronoConfig.cmake"
+    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/chrono)
+write_basic_package_version_file(
+    "${CMAKE_CURRENT_BINARY_DIR}/chronoConfigVersion.cmake"
+    VERSION ${PROJECT_VERSION}
+    COMPATIBILITY SameMajorVersion)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/chronoConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/chronoConfigVersion.cmake"
+    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/chrono)
