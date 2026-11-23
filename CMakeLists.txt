@@ -12,14 +12,16 @@ target_include_directories(chrono PUBLIC
     $<INSTALL_INTERFACE:include>)
 set_target_properties(chrono PROPERTIES C_STANDARD 99 C_STANDARD_REQUIRED YES)
 
+if(WIN32 OR UNIX)
+    target_sources(chrono PRIVATE src/chrono_clock.c)
+    if(NOT WIN32)
+        set_source_files_properties(src/chrono_clock.c PROPERTIES COMPILE_DEFINITIONS _POSIX_C_SOURCE=200809L)
+    endif()
+endif()
+
 if(CHRONO_BUILD_EXAMPLES)
     add_executable(chrono_example examples/main.c)
     target_link_libraries(chrono_example PRIVATE chrono::chrono)
-    if(WIN32)
-        # QueryPerformanceCounter is provided by the Windows SDK.
-    elseif(UNIX)
-        target_compile_definitions(chrono_example PRIVATE _POSIX_C_SOURCE=200809L)
-    endif()
 endif()
 
 if(CHRONO_BUILD_TESTS)

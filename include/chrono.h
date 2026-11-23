@@ -10,6 +10,9 @@ extern "C" {
 /* Monotonic microsecond clock supplied by the target platform. */
 typedef uint64_t (*chrono_clock_fn)(void);
 
+/* Built-in monotonic microsecond clock on Windows and POSIX targets. */
+uint64_t chrono_get_time_us(void);
+
 typedef struct {
     chrono_clock_fn clock;
     uint64_t start_us;

@@ -6,7 +6,8 @@ Minimal C99 microsecond stopwatch library for embedded systems.
 
 - `include/chrono.h`: public API
 - `src/chrono.c`: platform-independent implementation
-- `examples/main.c`: Windows/Linux clock adapter and usage
+- `src/chrono_clock.c`: Windows and POSIX monotonic clock
+- `examples/main.c`: example using `chrono_init(&timer, chrono_get_time_us)`
 - `tests/test_chrono.c`: deterministic tests
 
 ## Build
